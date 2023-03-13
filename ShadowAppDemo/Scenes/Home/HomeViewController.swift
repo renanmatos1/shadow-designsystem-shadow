@@ -6,7 +6,7 @@ class HomeViewController: UIViewController {
     private let contentView: UILabel = {
         let view = UILabel()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .groupTableViewBackground
+        view.backgroundColor = .tertiarySystemGroupedBackground
         view.text = "ContentView"
         view.textAlignment = .center
 
@@ -35,14 +35,15 @@ class HomeViewController: UIViewController {
     private func setupConstraints() {
         NSLayoutConstraint.activate([
             contentView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            contentView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            contentView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             contentView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20.0),
             contentView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20.0)
         ])
     }
 
     private func applyAdditionalChanges() {
-        view.backgroundColor = .white
+        view.backgroundColor = .systemBackground
         navigationItem.title = "Home"
+        navigationItem.largeTitleDisplayMode = .always
     }
 }
