@@ -26,6 +26,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let homeViewController = HomeViewController()
         let navigationController = UINavigationController(rootViewController: homeViewController)
         navigationController.navigationBar.prefersLargeTitles = true
+        UIBarButtonItem.appearance().tintColor = .black
 
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
