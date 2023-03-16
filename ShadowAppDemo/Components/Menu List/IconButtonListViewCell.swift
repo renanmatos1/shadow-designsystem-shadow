@@ -1,16 +1,12 @@
 import UIKit
 
 class IconButtonListViewCell: UICollectionViewCell {
-
-
     static let identifier = "IconButtonListViewCell"
     
     private var iconButton: IconButtonWithLabelView?
     
-    var listName: [listComponents] = []
-    
-    public func configure(iconList: [listComponents]) {
-        
+    public func configure(data: IconButtonListData) {
+        iconButton = .init(image: data.icon, title: data.title)
         setupView()
     }
     

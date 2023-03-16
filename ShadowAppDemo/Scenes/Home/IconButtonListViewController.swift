@@ -1,21 +1,19 @@
-
 import UIKit
 
 class IconButtonListViewController: UIViewController {
-    
-    var listName: [listComponents] = []
-    
-    private let iconButtonListView: IconButtonListView = {
-        let listView = IconButtonListView()
-        
-        return listView
-        
-    }()
+
+    private var list: [IconButtonListData] = [
+        .init(icon: .pixIcon, title: "Area Pix"),
+        .init(icon: .barIcon, title: "Pagar"),
+        .init(icon: .myCardIcon, title: "Cartão")
+    ]
+
+    private lazy var iconButtonListView = IconButtonListView(list: list)
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupLayout()
-        
+        iconButtonListView.delegate = self
     }
 
     private func setupLayout() {
@@ -41,7 +39,11 @@ class IconButtonListViewController: UIViewController {
             
         ])
     }
-
 }
 
-
+// MARK: - IconButtonListViewDelegate
+extension IconButtonListViewController: IconButtonListViewDelegate {
+    func didSelectItemAt(indexPath: IndexPath) {
+        print("Select at: \(indexPath)")
+    }
+}

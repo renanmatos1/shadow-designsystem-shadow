@@ -14,8 +14,6 @@
 		41A2C74829C235C00003EDAB /* IconButtonListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A2C74729C235C00003EDAB /* IconButtonListViewController.swift */; };
 		41A2C74A29C236210003EDAB /* IconButtonListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A2C74929C236210003EDAB /* IconButtonListView.swift */; };
 		41A2C74D29C23DE10003EDAB /* IconButtonListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A2C74C29C23DE10003EDAB /* IconButtonListViewCell.swift */; };
-		41A2C74F29C2CA5E0003EDAB /* ListIcons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A2C74E29C2CA5E0003EDAB /* ListIcons.swift */; };
-		41A2C75129C2CD6F0003EDAB /* ListComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A2C75029C2CD6F0003EDAB /* ListComponents.swift */; };
 		41B8490829C16D1B00C3CB98 /* IconBarCodeButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B8490729C16D1B00C3CB98 /* IconBarCodeButtonView.swift */; };
 		41B8490A29C172FA00C3CB98 /* IconBarCodeButtonFullViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B8490929C172FA00C3CB98 /* IconBarCodeButtonFullViewController.swift */; };
 		41C72C4229C0D3EA0057FAC7 /* RMButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C72C4129C0D3EA0057FAC7 /* RMButton.swift */; };
@@ -31,6 +29,7 @@
 		7762517A29BF67DE004F0532 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7762517929BF67DE004F0532 /* Assets.xcassets */; };
 		7762517D29BF67DE004F0532 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7762517B29BF67DE004F0532 /* LaunchScreen.storyboard */; };
 		7762518929BF6BD9004F0532 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7762518829BF6BD9004F0532 /* HomeViewController.swift */; };
+		77BDD0E729C38D670047F589 /* IconButtonListData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77BDD0E629C38D670047F589 /* IconButtonListData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,8 +40,6 @@
 		41A2C74729C235C00003EDAB /* IconButtonListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconButtonListViewController.swift; sourceTree = "<group>"; };
 		41A2C74929C236210003EDAB /* IconButtonListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconButtonListView.swift; sourceTree = "<group>"; };
 		41A2C74C29C23DE10003EDAB /* IconButtonListViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconButtonListViewCell.swift; sourceTree = "<group>"; };
-		41A2C74E29C2CA5E0003EDAB /* ListIcons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListIcons.swift; sourceTree = "<group>"; };
-		41A2C75029C2CD6F0003EDAB /* ListComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListComponents.swift; sourceTree = "<group>"; };
 		41B8490729C16D1B00C3CB98 /* IconBarCodeButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconBarCodeButtonView.swift; sourceTree = "<group>"; };
 		41B8490929C172FA00C3CB98 /* IconBarCodeButtonFullViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconBarCodeButtonFullViewController.swift; sourceTree = "<group>"; };
 		41C72C4129C0D3EA0057FAC7 /* RMButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMButton.swift; sourceTree = "<group>"; };
@@ -60,6 +57,7 @@
 		7762517C29BF67DE004F0532 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7762517E29BF67DE004F0532 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7762518829BF6BD9004F0532 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		77BDD0E629C38D670047F589 /* IconButtonListData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconButtonListData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,8 +83,7 @@
 		41A2C75229C2CD760003EDAB /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				41A2C74E29C2CA5E0003EDAB /* ListIcons.swift */,
-				41A2C75029C2CD6F0003EDAB /* ListComponents.swift */,
+				77BDD0E629C38D670047F589 /* IconButtonListData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -266,7 +263,7 @@
 				4197A9CE29C2273D00EF8EDE /* MyCardView.swift in Sources */,
 				41B8490A29C172FA00C3CB98 /* IconBarCodeButtonFullViewController.swift in Sources */,
 				4197A9CC29C226F900EF8EDE /* MyCardsViewController.swift in Sources */,
-				41A2C74F29C2CA5E0003EDAB /* ListIcons.swift in Sources */,
+				77BDD0E729C38D670047F589 /* IconButtonListData.swift in Sources */,
 				41A2C74D29C23DE10003EDAB /* IconButtonListViewCell.swift in Sources */,
 				41B8490829C16D1B00C3CB98 /* IconBarCodeButtonView.swift in Sources */,
 				41A2C74A29C236210003EDAB /* IconButtonListView.swift in Sources */,
@@ -274,7 +271,6 @@
 				41C72C5329C165130057FAC7 /* IconBarCodeButtonViewController.swift in Sources */,
 				41982E0D29C1815200105F8B /* IconBarCodeButtonFullView.swift in Sources */,
 				41C72C4F29C10A6A0057FAC7 /* IconButtonWithLabelViewController.swift in Sources */,
-				41A2C75129C2CD6F0003EDAB /* ListComponents.swift in Sources */,
 				41C72C5129C10BC00057FAC7 /* IconButtonWithLabelView.swift in Sources */,
 				41C72C4829C0F5560057FAC7 /* IconButtonView.swift in Sources */,
 			);

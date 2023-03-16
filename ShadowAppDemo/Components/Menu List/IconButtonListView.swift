@@ -1,11 +1,13 @@
 import UIKit
 
+protocol IconButtonListViewDelegate: AnyObject {
+    func didSelectItemAt(indexPath: IndexPath)
+}
+
 class IconButtonListView: UIView {
-    
-    var list: [String] = ["1", "2", "3", "4", "5", "6", "7", "8", "1", "1", "1"]
-    
-    var listName: [listComponents] = []
-    
+
+    let list: [IconButtonListData]
+
     private let colectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
@@ -19,8 +21,11 @@ class IconButtonListView: UIView {
         
         return collection
     }()
+
+    public weak var delegate: IconButtonListViewDelegate?
     
-    init() {
+    init(list: [IconButtonListData]) {
+        self.list = list
         super.init(frame: .zero)
         setupView()
     }
@@ -28,7 +33,11 @@ class IconButtonListView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
+    deinit {
+        print("denit: IconButtonListView")
+    }
+
     private func setupView() {
         buildHierarchy()
         setupConstraints()
@@ -42,7 +51,12 @@ class IconButtonListView: UIView {
     }
     
     private func setupCollectionView() {
+//        DispatchQueue.main.async {
+//            self.collectionView.isScrollEnabled = true
+//        }
+
         colectionView.dataSource = self
+        colectionView.delegate = self
         colectionView.register(IconButtonListViewCell.self, forCellWithReuseIdentifier: IconButtonListViewCell.identifier)
     }
     
@@ -56,12 +70,11 @@ class IconButtonListView: UIView {
             colectionView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor)
         ])
     }
-    
 }
 
 extension IconButtonListView: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        listName.count
+        list.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -69,8 +82,14 @@ extension IconButtonListView: UICollectionViewDataSource {
             return UICollectionViewCell()
             
         }
-        cell.configure(iconList: listName[indexPath.row])
+        let data = list[indexPath.row]
+        cell.configure(data: data)
         return cell
     }
 }
 
+extension IconButtonListView: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        delegate?.didSelectItemAt(indexPath: indexPath)
+    }
+}
